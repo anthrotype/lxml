@@ -1,4 +1,7 @@
 import os
+os.environ["PKG_GONFIG"] = "true"
+os.environ["STATICBUILD"] = "1"
+os.environ["CFLAGS"] = " ".join([os.environ.get("CFLAGS", ""), "-fPIC"])
 import re
 import sys
 import fnmatch
